@@ -1,0 +1,6 @@
+setup.py
+demand_forecastin_project.egg-info/PKG-INFO
+demand_forecastin_project.egg-info/SOURCES.txt
+demand_forecastin_project.egg-info/dependency_links.txt
+demand_forecastin_project.egg-info/requires.txt
+demand_forecastin_project.egg-info/top_level.txt

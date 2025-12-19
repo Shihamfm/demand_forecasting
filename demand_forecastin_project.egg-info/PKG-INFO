@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: demand_forecastin_project
+Version: 0.0.1
+Author: Shiham
+Author-email: shihamfm@gmail.com
+Requires-Dist: ipykernel
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
