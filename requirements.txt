@@ -3,4 +3,7 @@ numpy
 pandas
 matplotlib
 seaborn
+scikit-learn
+xgboost
+lightgbm == 4.6.0
 -e .
