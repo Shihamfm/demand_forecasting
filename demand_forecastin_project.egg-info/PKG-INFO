@@ -11,6 +11,7 @@ Requires-Dist: seaborn
 Requires-Dist: scikit-learn
 Requires-Dist: xgboost
 Requires-Dist: lightgbm==4.6.0
+Requires-Dist: catboost
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist

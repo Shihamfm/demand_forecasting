@@ -1,0 +1,17 @@
+[ 2026-01-11 01:15:17,435 ] 42 root - INFO - Creating date, store_id and item level values
+[ 2026-01-11 01:15:17,479 ] 66 root - INFO - Get the date range
+[ 2026-01-11 01:15:17,492 ] 89 root - INFO - Define the calendar features
+[ 2026-01-11 01:15:17,497 ] 99 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:15:17,671 ] 110 root - INFO - Create timeseries feature engineering
+[ 2026-01-11 01:15:17,675 ] 117 root - INFO - Sort & Group
+[ 2026-01-11 01:15:17,684 ] 123 root - INFO - Apply lag features
+[ 2026-01-11 01:15:17,693 ] 135 root - INFO - Apply rolling means
+[ 2026-01-11 01:15:17,701 ] 148 root - INFO - Apply rolling volatality
+[ 2026-01-11 01:15:17,708 ] 159 root - INFO - Apply Rolling max (captures spikes)
+[ 2026-01-11 01:15:17,714 ] 168 root - INFO - Get intermediate demand features
+[ 2026-01-11 01:15:17,714 ] 172 root - INFO - Get price & promotion dynamics
+[ 2026-01-11 01:15:17,716 ] 180 root - INFO - Get Relative price change
+[ 2026-01-11 01:15:17,716 ] 187 root - INFO - Get promotion frequency
+[ 2026-01-11 01:15:17,719 ] 201 root - INFO - Create calendar cyclin encoding
+[ 2026-01-11 01:15:17,721 ] 213 root - INFO - Create 7-Day Forecast Targets (Multi-Horizon)
+[ 2026-01-11 01:15:17,750 ] 225 root - INFO - Data preprocessing is completed

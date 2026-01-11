@@ -1,0 +1,64 @@
+[ 2026-01-11 01:01:23,323 ] 40 root - INFO - Created datae, store_id and item level values
+[ 2026-01-11 01:01:23,363 ] 61 root - INFO -  
+[ 2026-01-11 01:01:23,375 ] 84 root - INFO - Define the calendar features
+[ 2026-01-11 01:01:23,383 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,389 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,395 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,401 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,406 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,411 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,419 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,424 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,429 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,434 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,439 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,443 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,448 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,453 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,457 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,461 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,467 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,471 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,475 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,480 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,485 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,490 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,494 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,499 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,504 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,509 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,515 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,519 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,524 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,529 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,535 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,539 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,544 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,548 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,552 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,558 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,564 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,568 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,573 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,577 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,583 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,587 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,592 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,597 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,602 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,607 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,612 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,617 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,621 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,626 ] 12 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-11 01:01:23,642 ] 103 root - INFO - Create timeseries feature engineering
+[ 2026-01-11 01:01:23,647 ] 110 root - INFO - Sort & Group
+[ 2026-01-11 01:01:23,655 ] 116 root - INFO - Apply lag features
+[ 2026-01-11 01:01:23,665 ] 128 root - INFO - Apply rolling means
+[ 2026-01-11 01:01:23,672 ] 141 root - INFO - Apply rolling volatality
+[ 2026-01-11 01:01:23,678 ] 152 root - INFO - Apply Rolling max (captures spikes)
+[ 2026-01-11 01:01:23,681 ] 161 root - INFO - Get intermediate demand features
+[ 2026-01-11 01:01:23,682 ] 165 root - INFO - Get price & promotion dynamics
+[ 2026-01-11 01:01:23,683 ] 173 root - INFO - Get Relative price change
+[ 2026-01-11 01:01:23,684 ] 180 root - INFO - Get promotion frequency
+[ 2026-01-11 01:01:23,686 ] 194 root - INFO - Create calendar cyclin encoding
