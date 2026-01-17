@@ -53,7 +53,9 @@ class ModelTrainer:
                     num_leaves=64,
                     subsample=0.8,
                     colsample_bytree=0.8,
-                    random_state=42),
+                    random_state=42,
+                    verbose=-1
+                    ),
 
                 "model_xgb": XGBRegressor(
                     n_estimators=500,
@@ -77,7 +79,7 @@ class ModelTrainer:
 
             # 4. Identify Best Model
             best_model_score = min(list(model_score.values()))
-            print('The best model score {best_model_score}')
+            print(f'The best model score {best_model_score}')
 
             best_model_name = list(model_score.keys())[
                 list(model_score.values()).index(best_model_score)
