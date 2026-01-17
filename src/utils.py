@@ -1,5 +1,6 @@
 import os
 import sys
+import pickle
 
 import pandas as pd
 import numpy as np
@@ -238,6 +239,70 @@ def train_test_split(df, train_cutoff_pct):
     test_df   = df[df['date'] > train_cutoff]
 
     return train_df, test_df
+
+# WAPE (Weighted Absolute Percentage Error)
+def wape(y_true, y_pred):
+    '''
+    Calculating the Weighted Absolute Percentage Error WAPE
+    '''
+    return np.sum(np.abs(y_true - y_pred)) / np.sum(y_true)
+
+def evaluate_model_lgb(model_lgb, X_train, y_train, X_test, y_test, TARGET_COLS):
+    models_lgb = {}
+    preds_lgb = {}
+    wape_lgb = {}
+
+    for i, target in enumerate(TARGET_COLS):
+        model_lgb.fit(
+            X_train, y_train[target],
+            eval_set=[(X_test, y_test[target])],
+            eval_metric='l1',
+            callbacks=[models_lgb.early_stopping(50)],
+        )
+
+        models_lgb[target] = model_lgb
+        preds_lgb[target] = model_lgb.predict(X_test)
+        
+    for target in TARGET_COLS:
+        score_lgb = wape(y_test[target].values, preds_lgb[target])
+        wape_lgb.append(score_lgb)
+        print(f"{target} WAPE: {score_lgb:.3f}")
+    
+    return wape_lgb
+
+def evaluate_model_xgb(model_xgb, X_train, y_train, X_test, y_test, TARGET_COLS):
+    models_xgb = {}
+    preds_xgb = {}
+    wape_xgb = {}
+
+    for i, target in enumerate(TARGET_COLS):
+        model_xgb.fit(
+            X_train, y_train[target],
+            eval_set=[(X_test, y_test[target])],
+            verbose=False
+        )
+
+        models_xgb[target] = model_xgb
+        preds_xgb[target] = model_xgb.predict(X_test)
+        
+    for target in TARGET_COLS:
+        score_xgb = wape(y_test[target].values, preds_xgb[target])
+        wape_xgb.append(score_xgb)
+        print(f"{target} WAPE: {score_xgb:.3f}")
+    
+    return wape_xgb
+
+def save_object(file_path, obj):
+    try:
+        dir_path = os.path.dirname(file_path)
+
+        os.makedirs(dir_path, exist_ok=True)
+
+        with open(file_path, "wb") as file_obj:
+            pickle.dump(obj, file_obj)
+
+    except Exception as e:
+        raise CustomException(e, sys)
 
 
 if __name__ == "__main__":
