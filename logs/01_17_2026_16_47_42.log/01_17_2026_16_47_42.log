@@ -1,0 +1,25 @@
+[ 2026-01-17 16:47:42,898 ] 28 root - INFO - Entered the data ingestion method or component
+[ 2026-01-17 16:47:42,916 ] 39 root - INFO - Read the dataset as dataframe
+[ 2026-01-17 16:47:42,957 ] 43 root - INFO - Creating date, store_id and item level values
+[ 2026-01-17 16:47:42,967 ] 65 root - INFO - Get the date range
+[ 2026-01-17 16:47:42,974 ] 88 root - INFO - Define the calendar features
+[ 2026-01-17 16:47:42,977 ] 98 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-17 16:47:43,095 ] 109 root - INFO - Create timeseries feature engineering
+[ 2026-01-17 16:47:43,098 ] 116 root - INFO - Sort & Group
+[ 2026-01-17 16:47:43,103 ] 122 root - INFO - Apply lag features
+[ 2026-01-17 16:47:43,109 ] 134 root - INFO - Apply rolling means
+[ 2026-01-17 16:47:43,116 ] 147 root - INFO - Apply rolling volatality
+[ 2026-01-17 16:47:43,121 ] 158 root - INFO - Apply Rolling max (captures spikes)
+[ 2026-01-17 16:47:43,122 ] 167 root - INFO - Get intermediate demand features
+[ 2026-01-17 16:47:43,123 ] 171 root - INFO - Get price & promotion dynamics
+[ 2026-01-17 16:47:43,124 ] 179 root - INFO - Get Relative price change
+[ 2026-01-17 16:47:43,124 ] 186 root - INFO - Get promotion frequency
+[ 2026-01-17 16:47:43,126 ] 200 root - INFO - Create calendar cyclin encoding
+[ 2026-01-17 16:47:43,127 ] 212 root - INFO - Create 7-Day Forecast Targets (Multi-Horizon)
+[ 2026-01-17 16:47:43,146 ] 224 root - INFO - Data preprocessing is completed
+[ 2026-01-17 16:47:43,147 ] 46 root - INFO - Pre processed the raw dataset
+[ 2026-01-17 16:47:43,411 ] 51 root - INFO - Train and test spit completed
+[ 2026-01-17 16:47:43,665 ] 56 root - INFO - Ingestion of the raw data, preprocessed data, train data and test data is completed
+[ 2026-01-17 16:47:43,666 ] 43 root - INFO - Reading data from artifacts\train.csv and artifacts\test.csv
+[ 2026-01-17 16:47:43,722 ] 47 root - INFO - Read train and test data completed
+[ 2026-01-17 16:47:43,724 ] 55 root - INFO - Applying Features and next 7 days target on trainig dataframe and testing dataframe

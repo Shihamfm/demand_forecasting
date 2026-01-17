@@ -1,0 +1,22 @@
+[ 2026-01-17 15:46:24,427 ] 25 root - INFO - Entered the data ingestion method or component
+[ 2026-01-17 15:46:24,446 ] 36 root - INFO - Read the dataset as dataframe
+[ 2026-01-17 15:46:24,491 ] 43 root - INFO - Creating date, store_id and item level values
+[ 2026-01-17 15:46:24,505 ] 65 root - INFO - Get the date range
+[ 2026-01-17 15:46:24,513 ] 88 root - INFO - Define the calendar features
+[ 2026-01-17 15:46:24,516 ] 98 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-17 15:46:24,633 ] 109 root - INFO - Create timeseries feature engineering
+[ 2026-01-17 15:46:24,636 ] 116 root - INFO - Sort & Group
+[ 2026-01-17 15:46:24,642 ] 122 root - INFO - Apply lag features
+[ 2026-01-17 15:46:24,648 ] 134 root - INFO - Apply rolling means
+[ 2026-01-17 15:46:24,655 ] 147 root - INFO - Apply rolling volatality
+[ 2026-01-17 15:46:24,659 ] 158 root - INFO - Apply Rolling max (captures spikes)
+[ 2026-01-17 15:46:24,661 ] 167 root - INFO - Get intermediate demand features
+[ 2026-01-17 15:46:24,661 ] 171 root - INFO - Get price & promotion dynamics
+[ 2026-01-17 15:46:24,662 ] 179 root - INFO - Get Relative price change
+[ 2026-01-17 15:46:24,663 ] 186 root - INFO - Get promotion frequency
+[ 2026-01-17 15:46:24,665 ] 200 root - INFO - Create calendar cyclin encoding
+[ 2026-01-17 15:46:24,667 ] 212 root - INFO - Create 7-Day Forecast Targets (Multi-Horizon)
+[ 2026-01-17 15:46:24,686 ] 224 root - INFO - Data preprocessing is completed
+[ 2026-01-17 15:46:24,687 ] 43 root - INFO - Pre processed the raw dataset
+[ 2026-01-17 15:46:24,995 ] 48 root - INFO - Train and test spit completed
+[ 2026-01-17 15:46:25,285 ] 53 root - INFO - Ingestion of the raw data, preprocessed data, train data and test data is completed

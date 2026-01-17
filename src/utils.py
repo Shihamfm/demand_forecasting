@@ -248,16 +248,17 @@ def wape(y_true, y_pred):
     return np.sum(np.abs(y_true - y_pred)) / np.sum(y_true)
 
 def evaluate_model_lgb(model_lgb, X_train, y_train, X_test, y_test, TARGET_COLS):
+    import lightgbm as lgb
     models_lgb = {}
     preds_lgb = {}
-    wape_lgb = {}
+    wape_lgb = []
 
     for i, target in enumerate(TARGET_COLS):
         model_lgb.fit(
             X_train, y_train[target],
             eval_set=[(X_test, y_test[target])],
             eval_metric='l1',
-            callbacks=[models_lgb.early_stopping(50)],
+            callbacks=[lgb.early_stopping(50)],
         )
 
         models_lgb[target] = model_lgb
@@ -267,13 +268,13 @@ def evaluate_model_lgb(model_lgb, X_train, y_train, X_test, y_test, TARGET_COLS)
         score_lgb = wape(y_test[target].values, preds_lgb[target])
         wape_lgb.append(score_lgb)
         print(f"{target} WAPE: {score_lgb:.3f}")
-    
-    return wape_lgb
+
+    return np.mean(wape_lgb)    
 
 def evaluate_model_xgb(model_xgb, X_train, y_train, X_test, y_test, TARGET_COLS):
     models_xgb = {}
     preds_xgb = {}
-    wape_xgb = {}
+    wape_xgb = []
 
     for i, target in enumerate(TARGET_COLS):
         model_xgb.fit(
@@ -290,7 +291,7 @@ def evaluate_model_xgb(model_xgb, X_train, y_train, X_test, y_test, TARGET_COLS)
         wape_xgb.append(score_xgb)
         print(f"{target} WAPE: {score_xgb:.3f}")
     
-    return wape_xgb
+    return np.mean(wape_xgb)
 
 def save_object(file_path, obj):
     try:
@@ -304,8 +305,31 @@ def save_object(file_path, obj):
     except Exception as e:
         raise CustomException(e, sys)
 
+def train_and_evaluate_models(X_train, y_train, X_test, y_test, TARGET_COLS, best_model):
+    '''
+    From the chosen best model derive seperate seven models for each day
+    '''
+    models = {}
+    scores = {}
+
+    for target in TARGET_COLS:
+        model = best_model
+        model.fit(X_train, y_train[target])
+
+        preds = model.predict(X_test)
+        score = wape(y_test[target].values, preds)
+
+        models[target] = model
+        scores[target] = score
+
+        logging.info(f"{target} WAPE: {score}")
+
+    return models, scores
+
+
 
 if __name__ == "__main__":
     print("Hello")
     df_preprocessed = data_preprocessing("E:/Projects/DS/Demand_Forecasting/demand_forecasting/notebook/data/walmart_daily_sales_2025_realistic.csv")
     print(df_preprocessed.head())
+

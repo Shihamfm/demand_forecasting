@@ -5,6 +5,9 @@ from src.logger import logging
 from src.utils import data_preprocessing, train_test_split
 import pandas as pd
 
+from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer, ModelTrainerConfig
+
 from dataclasses import dataclass
 
 import warnings
@@ -62,4 +65,10 @@ class DataIngestioin:
 
 if __name__ == '__main__':
     obj = DataIngestioin()
-    obj.initiate_data_ingestion()
+    train_data, test_data = obj.initiate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    X_train, y_train, X_test, y_test, target_cols = data_transformation.initiate_data_transformation(train_data, test_data)
+
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_model_trainer(X_train, y_train, X_test, y_test, target_cols)

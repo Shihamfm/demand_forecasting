@@ -1,0 +1,39 @@
+[ 2026-01-17 19:33:36,305 ] 28 root - INFO - Entered the data ingestion method or component
+[ 2026-01-17 19:33:36,323 ] 39 root - INFO - Read the dataset as dataframe
+[ 2026-01-17 19:33:36,366 ] 43 root - INFO - Creating date, store_id and item level values
+[ 2026-01-17 19:33:36,375 ] 65 root - INFO - Get the date range
+[ 2026-01-17 19:33:36,386 ] 88 root - INFO - Define the calendar features
+[ 2026-01-17 19:33:36,389 ] 98 root - INFO - Reindexing Function to handle missing dates
+[ 2026-01-17 19:33:36,514 ] 109 root - INFO - Create timeseries feature engineering
+[ 2026-01-17 19:33:36,517 ] 116 root - INFO - Sort & Group
+[ 2026-01-17 19:33:36,522 ] 122 root - INFO - Apply lag features
+[ 2026-01-17 19:33:36,528 ] 134 root - INFO - Apply rolling means
+[ 2026-01-17 19:33:36,536 ] 147 root - INFO - Apply rolling volatality
+[ 2026-01-17 19:33:36,540 ] 158 root - INFO - Apply Rolling max (captures spikes)
+[ 2026-01-17 19:33:36,542 ] 167 root - INFO - Get intermediate demand features
+[ 2026-01-17 19:33:36,542 ] 171 root - INFO - Get price & promotion dynamics
+[ 2026-01-17 19:33:36,543 ] 179 root - INFO - Get Relative price change
+[ 2026-01-17 19:33:36,543 ] 186 root - INFO - Get promotion frequency
+[ 2026-01-17 19:33:36,545 ] 200 root - INFO - Create calendar cyclin encoding
+[ 2026-01-17 19:33:36,547 ] 212 root - INFO - Create 7-Day Forecast Targets (Multi-Horizon)
+[ 2026-01-17 19:33:36,566 ] 224 root - INFO - Data preprocessing is completed
+[ 2026-01-17 19:33:36,567 ] 46 root - INFO - Pre processed the raw dataset
+[ 2026-01-17 19:33:36,838 ] 51 root - INFO - Train and test spit completed
+[ 2026-01-17 19:33:37,104 ] 56 root - INFO - Ingestion of the raw data, preprocessed data, train data and test data is completed
+[ 2026-01-17 19:33:37,106 ] 43 root - INFO - Reading data from artifacts\train.csv and artifacts\test.csv
+[ 2026-01-17 19:33:37,165 ] 47 root - INFO - Read train and test data completed
+[ 2026-01-17 19:33:37,167 ] 55 root - INFO - Applying Features and next 7 days target on trainig dataframe and testing dataframe
+[ 2026-01-17 19:33:37,168 ] 27 root - INFO - Get train feature input, train target, test feature input & test target
+[ 2026-01-17 19:33:37,168 ] 36 root - INFO - Calculating Seasonal Naive baseline (Lag-7)
+[ 2026-01-17 19:33:37,168 ] 43 root - INFO - Baseline Mean Absolute Error: 6.094761904761905
+[ 2026-01-17 19:33:37,168 ] 47 root - INFO - Get the 'Light Gradient-Boosting Machine' & 'eXtreme Gradient Boosting' models as multi-output model
+[ 2026-01-17 19:33:37,169 ] 71 root - INFO - fit, evaluate the models and get the best model
+[ 2026-01-17 19:33:45,429 ] 95 root - INFO - Best Model found: model_lgb with score: 0.37299810300174563
+[ 2026-01-17 19:33:45,429 ] 98 root - INFO - Trains 7 independent LightGBM models where each model learns horizon-specific patterns
+[ 2026-01-17 19:33:45,889 ] 325 root - INFO - y_t_plus_1 WAPE: 0.3750534909205031
+[ 2026-01-17 19:33:46,337 ] 325 root - INFO - y_t_plus_2 WAPE: 0.39125651177948145
+[ 2026-01-17 19:33:46,751 ] 325 root - INFO - y_t_plus_3 WAPE: 0.3858320874899339
+[ 2026-01-17 19:33:47,193 ] 325 root - INFO - y_t_plus_4 WAPE: 0.38878997627276946
+[ 2026-01-17 19:33:47,637 ] 325 root - INFO - y_t_plus_5 WAPE: 0.36862375689745036
+[ 2026-01-17 19:33:48,067 ] 325 root - INFO - y_t_plus_6 WAPE: 0.36217564283821685
+[ 2026-01-17 19:33:48,490 ] 325 root - INFO - y_t_plus_7 WAPE: 0.36790885538108525
