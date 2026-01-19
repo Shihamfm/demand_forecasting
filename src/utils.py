@@ -267,7 +267,7 @@ def evaluate_model_lgb(model_lgb, X_train, y_train, X_test, y_test, TARGET_COLS)
     for target in TARGET_COLS:
         score_lgb = wape(y_test[target].values, preds_lgb[target])
         wape_lgb.append(score_lgb)
-        print(f"{target} WAPE: {score_lgb:.3f}")
+        #print(f"{target} WAPE: {score_lgb:.3f} for LGBM")
 
     return np.mean(wape_lgb)    
 
@@ -289,7 +289,7 @@ def evaluate_model_xgb(model_xgb, X_train, y_train, X_test, y_test, TARGET_COLS)
     for target in TARGET_COLS:
         score_xgb = wape(y_test[target].values, preds_xgb[target])
         wape_xgb.append(score_xgb)
-        print(f"{target} WAPE: {score_xgb:.3f}")
+        #print(f"{target} WAPE: {score_xgb:.3f} for XGBoost")
     
     return np.mean(wape_xgb)
 
@@ -302,6 +302,14 @@ def save_object(file_path, obj):
         with open(file_path, "wb") as file_obj:
             pickle.dump(obj, file_obj)
 
+    except Exception as e:
+        raise CustomException(e, sys)
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+    
     except Exception as e:
         raise CustomException(e, sys)
 
@@ -323,6 +331,7 @@ def train_and_evaluate_models(X_train, y_train, X_test, y_test, TARGET_COLS, bes
         scores[target] = score
 
         logging.info(f"{target} WAPE: {score}")
+        print(f"{target} WAPE: {score:.3f}")
 
     return models, scores
 
